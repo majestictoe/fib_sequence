@@ -1,5 +1,7 @@
 package edu.cse;
 
+import java.util.Arrays;
+
 public class FibNum implements Runnable {
 
     private int fibNumValue;
@@ -9,17 +11,25 @@ public class FibNum implements Runnable {
     }
 
     private int fibOf(){
+        int[] array = new int [fibNumValue];
         int prevX=0;
         int intX;
         int X=1;
-        System.out.println(X);
+        int Y=0;
+        array[Y] = X;
+        //System.out.println(X);
         for (int number = fibNumValue-1; number >=1; number--){
+            Y++;
             intX=X;
             X=prevX+X;
             prevX=intX;
-            System.out.println(X);
+            //System.out.println(X);
+            array[Y] = X;
         }
+       // System.out.println(Arrays.asList(array));
+        System.out.println(Arrays.toString(array));
         return X;
+
     }
 
 
