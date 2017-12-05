@@ -34,12 +34,12 @@ public class FibNum implements Runnable {
 
 
     private String woo(){
-        if(fibNumValue==1) {
+        if(fibNumValue % 10 == 1) {
             return "The " + fibNumValue + "st Fib number is " + fibOf() + ".";
-        }else if (fibNumValue==2){
+        }else if (fibNumValue % 10 == 2){
             return "The " + fibNumValue + "nd Fib number is " + fibOf() + ".";
         }
-        else if (fibNumValue==3){
+        else if (fibNumValue % 10 == 3){
             return "The " + fibNumValue + "rd Fib number is " + fibOf() + ".";
         } else{
             return "The " + fibNumValue + "th Fib number is " + fibOf() + ".";
